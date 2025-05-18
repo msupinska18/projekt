@@ -21,6 +21,7 @@ chrome_options.add_experimental_option("detach", True)
 
 # Uruchomienie przeglądarki
 driver = webdriver.Chrome(options=chrome_options)
+driver.maximize_window()  # Maksymalizacja okna
 
 # Otwórz przeglądarkę Bing
 driver.get("https://ebutik.pl/")
