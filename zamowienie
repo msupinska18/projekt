@@ -35,7 +35,7 @@ def test_wyszukiwanie(driver):
     # Poczekaj chwilę na załadowanie strony
     time.sleep(2)
 
-    # Znajdź i kliknij przycisk "Akceptuj" (jeśli się pojawi)
+    # Znajdź i kliknij przycisk "Akceptuj"
     try:
         accept_button = driver.find_element(By.XPATH, "//a[text()='Potwierdzam wszystkie']")
         accept_button.click()
@@ -45,13 +45,15 @@ def test_wyszukiwanie(driver):
         print("Nie znaleziono komunikatu o cookies. Kontynuuję.")
 
 
-    # Wyszukaj tekst bluza
+    # Wyszukaj tekst "Ostatnie sztuki extra 15% - kod:last"
     try:
-        search_filed = driver.find_element(By.XPATH, "//*[@id='menu_search_text']")
-        search_filed.send_keys("bluza")
-        print("Wpisano wyszukiwanie - bluza")
+        accept_rebate = driver.find_element(By.XPATH, "//*[@id='top_banner_1']/a/picture/img")
+        accept_rebate.click()
+        print("Ostatnie sztuki extra 15% - Rabat")
     except:
-        print("Brak wyszukiwanego produktu. Kontynuuję.")
+        print("Brak rabatu. Spróbuj ponownie")
+
+
 
     # Wybierz szukaj 
     try:
@@ -78,3 +80,6 @@ def test_wyszukiwanie(driver):
         print("Brak widocznej ilości produktów.")
 
 
+# Wywołanie testu
+
+test_wyszukiwanie(webdriver.Chrome())
