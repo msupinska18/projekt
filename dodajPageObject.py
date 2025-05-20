@@ -28,12 +28,12 @@ class DodajPage(KlasaWspolnaPage):
             print("Wybranie lupy nie powiodło się. Spróbuj ponownie.") 
 
 
-    def szukaj(self):
-        try:
-            guzik_szukaj = self.driver.find_element(By.XPATH, "//*[@id='menu_search']/div/button")
-            guzik_szukaj.click()
-        except:
-            print("Wybranie produktu nie powiodło się. Spróbuj ponownie.")
+  #  def szukaj(self):
+   #     try:
+    #        guzik_szukaj = self.driver.find_element(By.XPATH, "//*[@id='menu_search']/div/button")
+     #       guzik_szukaj.click()
+      #  except:
+       #     print("Wybranie produktu nie powiodło się. Spróbuj ponownie.")
 
     def wyszukaj_produkt(self):
         try:
@@ -49,12 +49,12 @@ class DodajPage(KlasaWspolnaPage):
         except:
             print("Wybranie produktu nie powiodło się. Spróbuj ponownie.")
 
-    def dodaj_do_koszyka(self):
-        try:
-            guzik_dodaj_do_koszyka = self.driver.find_element(By.XPATH, "//*[@id='projector_button_basket']")
-            guzik_dodaj_do_koszyka.click()
-        except:
-            print("Produkt nie został dodany do koszyka. Spróbuj ponownie.")    
+   # def dodaj_do_koszyka(self):
+       # try:
+        #    guzik_dodaj_do_koszyka = self.driver.find_element(By.XPATH, "//*[@id='projector_button_basket']")
+         #   guzik_dodaj_do_koszyka.click()
+        #except:
+         #   print("Produkt nie został dodany do koszyka. Spróbuj ponownie.")    
     
     def kontynuuj_zakupy(self):
         try:
