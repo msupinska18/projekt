@@ -3,12 +3,13 @@ import pytest
 from wyszukiwaniePageObject import wyszukiwaniePage
 
 
-# Dane do wprowadzenia
-zakladka = "bluza"
+def wczytaj_parametry(plik):
+    with open(plik, "r", encoding="utf-8") as f:
+        return [line.strip() for line in f.readlines()]  # Usunięcie białych znaków
 
+@pytest.mark.parametrize("zakladka", wczytaj_parametry("zakladki.txt"))
+def test_wyszukiwanie(zakladka):
 
-
-def test_wyszukiwanie():
     wyszukiwanie = wyszukiwaniePage()
 
     wyszukiwanie.otworz_strone()
