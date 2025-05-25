@@ -16,7 +16,6 @@ def test_dodaj():
     dodajProdukt.akceptuj_cookies()
     dodajProdukt.poczekaj(2)
 
-
     dodajProdukt.wprowadz_Nowosci(zakladka)
     dodajProdukt.poczekaj(2)
 
@@ -46,6 +45,6 @@ def test_dodaj():
         assert False
 
 
-test_dodaj()
+#test_dodaj()
 
     

@@ -26,21 +26,14 @@ class DodajPage(KlasaWspolnaPage):
             wpisz_nazwe.send_keys(zakladka)
         except:
             print("Wybranie lupy nie powiodło się. Spróbuj ponownie.") 
-
-
-  #  def szukaj(self):
-   #     try:
-    #        guzik_szukaj = self.driver.find_element(By.XPATH, "//*[@id='menu_search']/div/button")
-     #       guzik_szukaj.click()
-      #  except:
-       #     print("Wybranie produktu nie powiodło się. Spróbuj ponownie.")
-
+           
     def wyszukaj_produkt(self):
         try:
             wyszukaj_produkt = self.driver.find_element(By.XPATH, "//*[@id='search']/div[1]/div/h3/a")
             wyszukaj_produkt.click()
         except:
             print("Wyszukiwarka nic nie znalazła. Spróbuj ponownie.") 
+
 
     def wyszukaj(self):
         try:
@@ -49,19 +42,14 @@ class DodajPage(KlasaWspolnaPage):
         except:
             print("Wybranie produktu nie powiodło się. Spróbuj ponownie.")
 
-   # def dodaj_do_koszyka(self):
-       # try:
-        #    guzik_dodaj_do_koszyka = self.driver.find_element(By.XPATH, "//*[@id='projector_button_basket']")
-         #   guzik_dodaj_do_koszyka.click()
-        #except:
-         #   print("Produkt nie został dodany do koszyka. Spróbuj ponownie.")    
-    
+
     def kontynuuj_zakupy(self):
         try:
             guzik_kontynuuj_zakupy = self.driver.find_element(By.XPATH, "//*[@id='dialog_product_details']/div[2]/a[2]")
             guzik_kontynuuj_zakupy.click()
         except:
             print("Spróbuj ponownie.")    
+
 
     def idz_do_koszyka(self):        
         # Weryfikacja czy produkt znajduje się w koszyku
@@ -70,6 +58,7 @@ class DodajPage(KlasaWspolnaPage):
             guzik_zakladka_koszyk.click()
         except:
             print("Nie mozna przejsc do koszyka")    
+
 
     def rezultat(self):
             pole_rezultat = self.driver.find_element(By.XPATH, "//*[@id='basketedit_productslist']/h2")  

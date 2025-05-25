@@ -22,14 +22,7 @@ class usuwaniePage(KlasaWspolnaPage):
             wpisz_nazwe = self.driver.find_element(By.XPATH, "//*[@id='menu_search_text']")
             wpisz_nazwe.send_keys(zakladka)
         except:
-            print("Brak wyszukiwanego produktu w zakładce T-Shirty. Spróbuj ponownie.")     
-
- #   def szukaj(self):
-  #      try:
-   #         guzik_szukaj = self.driver.find_element(By.XPATH, "//*[@id='menu_search']/div/button") 
-    #        guzik_szukaj.click()
-     #   except:
-      #      print("Wybranie produktu nie powiodło się. Spróbuj ponownie.")   
+            print("Brak wyszukiwanego produktu w zakładce T-Shirty. Spróbuj ponownie.")
 
 
     def przejdz_do_produktu(self):
@@ -46,14 +39,8 @@ class usuwaniePage(KlasaWspolnaPage):
             guzik_rozmiar_s = self.driver.find_element(By.XPATH, "//*[@id='projector_sizes_cont']/div[2]")
             guzik_rozmiar_s.click()
         except:
-            print("Produkt nie dostęp w wybranym rozmiarze. Spróbuj ponownie.")  
-
-    def przejdz_do_koszyka(self):        
-        try:
-            guzik_przejdz_do_koszyka = self.driver.find_element(By.XPATH, "//*[@id='dialog_product_details']/div[2]/a[1]")
-            guzik_przejdz_do_koszyka.click()
-        except:
-            print("Spróbuj ponownie.") 
+            print("Produkt nie dostęp w wybranym rozmiarze. Spróbuj ponownie.") 
+            
 
     def usun_(self):
         try:

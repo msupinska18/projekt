@@ -25,6 +25,21 @@ class KlasaWspolnaPage:
         self.driver.maximize_window()  # Maksymalizacja okna
 
 
+    def wprowadz_login_uzytkownika(self, emailUzytkownika):
+        pole_uzytkownika_na_stronie = self.driver.find_element(By.NAME, "login")
+        pole_uzytkownika_na_stronie.send_keys(emailUzytkownika)
+
+        
+    def wprowadz_haslo_uzytkownika(self, haslo):
+        pole_haslo_na_stronie = self.driver.find_element(By.NAME, "password")
+        pole_haslo_na_stronie.send_keys(haslo)
+
+
+    def zaloguj_sie(self):
+        guzik = self.driver.find_element(By.XPATH, "//button[contains(., 'Zaloguj się')]")
+        guzik.click()
+
+
     def poczekaj(self, ileSekund):
           # Poczekaj na załadowanie strony
         time.sleep(ileSekund)
@@ -52,3 +67,11 @@ class KlasaWspolnaPage:
             guzik_dodaj_do_koszyka.click()
         except:
             print("Produkt nie został dodany do koszyka. Spróbuj ponownie.")    
+
+
+    def przejdz_do_koszyka(self):        
+        try:
+            guzik_przejdz_do_koszyka = self.driver.find_element(By.XPATH, "//*[@id='dialog_product_details']/div[2]/a[1]")
+            guzik_przejdz_do_koszyka.click()
+        except:
+            print("Spróbuj ponownie.")         

@@ -1,13 +1,10 @@
 import pytest
-#import random
 
 from logowaniePageObject import LoginPage
 
-r = random.randint(0, 1000)
 
 # Dane logowania
 EMAIL = "msupinska18@gmail.com"
-#EMAIL = f"zzzz{r}@gmail.com"
 PASSWORD = "Motylek25%"
 
 
