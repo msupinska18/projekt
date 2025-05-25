@@ -25,6 +25,11 @@ class KlasaWspolnaPage:
         self.driver.maximize_window()  # Maksymalizacja okna
 
 
+    def close_browser(self):
+        self.poczekaj(2)
+        self.driver.close()
+
+
     def wprowadz_login_uzytkownika(self, emailUzytkownika):
         pole_uzytkownika_na_stronie = self.driver.find_element(By.NAME, "login")
         pole_uzytkownika_na_stronie.send_keys(emailUzytkownika)

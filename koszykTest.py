@@ -5,12 +5,10 @@ from koszykPageObject import koszykPage
 
 # Dane logowania
 EMAIL = "msupinska18@gmail.com"
-#EMAIL = f"zzzz{r}@gmail.com"
 PASSWORD = "Motylek25%"
 
 # Dane do wprowadzenia
 zakladka = "Akcesoria"
-
 
 
 def test_koszyk():

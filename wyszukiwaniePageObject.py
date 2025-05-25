@@ -32,5 +32,12 @@ class wyszukiwaniePage(KlasaWspolnaPage):
     def rezultat(self):        
         # Weryfikacja tekst "Wyniki wyszukiwania"
         div_napis = self.driver.find_element(By.XPATH, "//*[@id='content']/section[1]/h1/span")
-        return div_napis        
+        return div_napis      
+
+    def rezultat_ilosc(self):        
+        # Weryfikacja tekst "Wyniki wyszukiwania"
+        span_napis = self.driver.find_element(By.XPATH, "//*[@id='content']/section[1]/span/span")
+        return span_napis    
     
+
+    #//*[@id="content"]/section[1]/span/span

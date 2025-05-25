@@ -29,6 +29,15 @@ def test_wyszukiwanie():
     else:
         assert False
 
+    rezultat_testu_ilosc = wyszukiwanie.rezultat_ilosc()
+
+    if rezultat_testu_ilosc != None :
+        assert int(rezultat_testu_ilosc.text) > 0
+    else:
+        assert False
+
+    wyszukiwanie.close_browser()
+
 
 #test_wyszukiwanie()
 

@@ -18,21 +18,6 @@ class LoginPage(KlasaWspolnaPage):
         self.driver.get("https://ebutik.pl/login.php?login")
 
 
-   # def wprowadz_login_uzytkownika(self, emailUzytkownika):
-    #    pole_uzytkownika_na_stronie = self.driver.find_element(By.NAME, "login")
-     #   pole_uzytkownika_na_stronie.send_keys(emailUzytkownika)
-
-        
-    #def wprowadz_haslo_uzytkownika(self, haslo):
-     #   pole_haslo_na_stronie = self.driver.find_element(By.NAME, "password")
-      #  pole_haslo_na_stronie.send_keys(haslo)
-
-
-    #def zaloguj_sie(self):
-     #   guzik = self.driver.find_element(By.XPATH, "//button[contains(., 'Zaloguj się')]")
-      #  guzik.click()
-
-
     def rezultat(self):        
         # Weryfikacja poprawnego logowania "Twoje konto"
         try:
