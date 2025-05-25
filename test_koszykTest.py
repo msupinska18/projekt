@@ -81,6 +81,8 @@ def test_koszyk():
         assert False
 
 
+    koszyk.close_browser()
+    
 #test_koszyk()
 
             

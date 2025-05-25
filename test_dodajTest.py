@@ -44,6 +44,7 @@ def test_dodaj():
     else:
         assert False
 
+    dodajProdukt.close_browser()
 
 #test_dodaj()
 

@@ -45,6 +45,7 @@ def test_usuwanie():
     else:
         assert False
 
+    usuwanieProduktu.close_browser()
 
 #test_usuwanie()
 

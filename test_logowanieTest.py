@@ -30,7 +30,7 @@ def test_logowanie_tylko_z_podanym_username():
     rezultat_logowania = mojLoginPage.zly_login()
     assert rezultat_logowania.text == "Podany login lub hasło nie jest poprawne."
 
-
+    mojLoginPage.close_browser()
     
 
 def test_logowanie():
@@ -54,6 +54,7 @@ def test_logowanie():
     assert rezultat_testu != None and rezultat_testu.text == "Twoje konto"
 
 
+    mojLoginPage.close_browser()
 
 #test_logowanie_tylko_z_podanym_username()
 
