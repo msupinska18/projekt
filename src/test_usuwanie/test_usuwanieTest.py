@@ -1,6 +1,6 @@
 import pytest
 
-from usuwaniePageObject import usuwaniePage
+from test_usuwanie.usuwaniePageObject import usuwaniePage
 
 
 # Dane do wprowadzenia

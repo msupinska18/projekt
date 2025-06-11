@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
-from KlasaWspolnaFile import KlasaWspolnaPage
+from src.KlasaWspolnaFile import KlasaWspolnaPage
 
 class DodajPage(KlasaWspolnaPage):
 

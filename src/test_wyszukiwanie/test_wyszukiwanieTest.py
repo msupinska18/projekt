@@ -1,13 +1,13 @@
 import pytest
 
-from wyszukiwaniePageObject import wyszukiwaniePage
+from test_wyszukiwanie.wyszukiwaniePageObject import wyszukiwaniePage
 
 
 def wczytaj_parametry(plik):
     with open(plik, "r", encoding="utf-8") as f:
         return [line.strip() for line in f.readlines()]  # Usunięcie białych znaków
 
-@pytest.mark.parametrize("zakladka", wczytaj_parametry("zakladki.txt"))
+@pytest.mark.parametrize("zakladka", wczytaj_parametry("dane\\zakladki.txt"))
 def test_wyszukiwanie(zakladka):
 
     wyszukiwanie = wyszukiwaniePage()

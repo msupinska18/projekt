@@ -1,6 +1,6 @@
 import pytest
 
-from logowaniePageObject import LoginPage
+from test_logowanie.logowaniePageObject import LoginPage
 
 
 # Dane logowania

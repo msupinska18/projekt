@@ -83,7 +83,7 @@ def test_koszyk():
 
     koszyk.close_browser()
     
-#test_koszyk()
+test_koszyk()
 
             
 

@@ -6,7 +6,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
-import time
+import time, sys, os
+
+sys.path.append(os.path.abspath("src"))  # Dodaje katalog nadrzędny do ścieżki
 from KlasaWspolnaFile import KlasaWspolnaPage
 
 class usuwaniePage(KlasaWspolnaPage):
